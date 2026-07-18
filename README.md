@@ -37,7 +37,7 @@ daily-trend-report/
 
 | 날짜 | 리포트 | 비고 |
 |---|---|---|
-| 2026-07-19 | [TOP 10](reports/2026-07-19/README.md) | |
+| 2026-07-19 | [TOP 10](reports/2026-07-19/README.md) | last30days 스킬 도입 (커뮤니티 펄스 섹션 추가) |
 | 2026-07-16 | [TOP 10](reports/2026-07-16/README.md) | 중복 제외 규칙 적용 시작 |
 | 2026-07-15 | [TOP 20](reports/2026-07-15/README.md) | 최초 확대판 |
 
