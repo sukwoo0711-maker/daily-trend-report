@@ -37,6 +37,7 @@ daily-trend-report/
 
 | 날짜 | 리포트 | 비고 |
 |---|---|---|
+| 2026-07-22 | [TOP 10](reports/2026-07-22/README.md) | 보안(SingGuard·Zero Trust)·관측성 계층 급부상 |
 | 2026-07-21 | [TOP 10](reports/2026-07-21/README.md) | auto-grill 검증(비판자 3+판정자 1), 순위축 '주목도순' 교정 |
 | 2026-07-20 | [TOP 10](reports/2026-07-20/README.md) | 중복 제외 기준을 '최근 7일'로 변경 |
 | 2026-07-19 | [TOP 10](reports/2026-07-19/README.md) | last30days 스킬 도입 (커뮤니티 펄스 섹션 추가) |
