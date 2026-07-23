@@ -37,6 +37,7 @@ daily-trend-report/
 
 | 날짜 | 리포트 | 비고 |
 |---|---|---|
+| 2026-07-23 | [TOP 10](reports/2026-07-23/README.md) | 검증 규약 적용 첫 판(신뢰도 컬럼·1차/2차 구분); 테마 '에이전트 보안·아이덴티티·격리'로 이동(HF 샌드박스 탈출·Buzz·T3MP3ST) |
 | 2026-07-22 | [TOP 10](reports/2026-07-22/README.md) | 보안(SingGuard·Zero Trust)·관측성 계층 급부상 |
 | 2026-07-21 | [TOP 10](reports/2026-07-21/README.md) | auto-grill 검증(비판자 3+판정자 1), 순위축 '주목도순' 교정 |
 | 2026-07-20 | [TOP 10](reports/2026-07-20/README.md) | 중복 제외 기준을 '최근 7일'로 변경 |
