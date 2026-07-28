@@ -67,3 +67,7 @@ daily-trend-report/
 ---
 
 방법론과 검증 상태는 [METHODOLOGY.md](METHODOLOGY.md)를 참고하십시오. 특정 AI 제품이나 모델에 종속되지 않습니다.
+
+## 주제형 조사 노트
+
+- 2026-07-29: [Git·Jira 연동 LLM 워크플로와 사양·TestCase·결함이력 활용](reports/2026-07-29/git-jira-llm-workflow.md)
