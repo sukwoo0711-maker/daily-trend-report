@@ -93,6 +93,8 @@ RTX 3070급 8 GB VRAM과 64 GB RAM을 기준으로 7B 4-bit 모델을 후보로 
 
 `INFERRED`: 최근 30일 자료는 이슈와 PR 사이에 AI 리뷰·요약 자동화를 배치하는 패턴을 지지한다. 그러나 제품사양서·TestCase·결함이력을 Qwen 2.5 7B로 연결했을 때의 품질과 비용 절감은 공개 자료에서 직접 확인하지 못했다. 따라서 첫 도입은 읽기 전용 변경 영향 리포트로 제한하고, 내부 평가셋에서 검색 정확도와 허위 근거율을 측정한 뒤 PR comment 초안과 Jira comment 초안으로 확대하는 것이 가장 안전하다.
 
+후속 검토: [과거 결함 검색용 Operational Memory Retrieval 도입 검토와 auto-grill](operational-memory-retrieval-auto-grill.md)
+
 ---
 
 *생성: last30days v3.11.1 공개 자료 조사 + 공식 문서 교차검토 · 조사 기간: 2026-06-28 ~ 2026-07-28 · 관찰 시점: 2026-07-29 KST*

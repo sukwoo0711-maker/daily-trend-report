@@ -71,3 +71,4 @@ daily-trend-report/
 ## 주제형 조사 노트
 
 - 2026-07-29: [Git·Jira 연동 LLM 워크플로와 사양·TestCase·결함이력 활용](reports/2026-07-29/git-jira-llm-workflow.md)
+- 2026-07-29: [과거 결함 검색용 Operational Memory Retrieval 도입 검토와 auto-grill](reports/2026-07-29/operational-memory-retrieval-auto-grill.md)
