@@ -52,7 +52,7 @@ daily-trend-report/
 
 | 날짜 | 리포트 | 비고 |
 |---|---|---|
-| 2026-07-30 | [관심사 조사](reports/2026-07-30/README.md) | 로컬 LLM·개발 메모리·결함 이력 검색: Git/Markdown reviewable memory, BM25 우선, bounded local model, retrieval 평가·보안 경계 |
+| 2026-07-30 | [채택 2건 + 방법론·보안 3건 · 관심사 조사](reports/2026-07-30/README.md) | **1부(트렌드)**: 하이브리드 첫 적용(뉴스=DISCOVERY 참여도 / 도구=GitHub REST API 직접 관측) → 07-29 open query 1 실행, **3일 연속 0건 종료·S등급 2건 복귀**(fable-method·self-learning-skills); HN Algolia로 permalink 재해결(open query 2 부분 해결); HANDBOOK.md 벤치마크(긴 정책문서 최고 36.2%)·HF 침입 기술 타임라인·스킬 저장소에 Windows 바이너리 동봉(G1 제외). **2부(관심사 조사)**: 로컬 LLM·개발 메모리·결함 이력 검색 — Git/Markdown reviewable memory, BM25 우선, bounded local model, retrieval 평가·보안 경계 |
 | 2026-07-29 | [방법론 2건](reports/2026-07-29/README.md) | 30일 윈도우로 되돌려도 브리치 클러스터가 랭킹 지배 → 재부상 원인=윈도우 아닌 참여도 랭킹 구조 실측; **채택 S/A 신규도구 0건(2일 연속)**; #1 열정↔채택 격차 논쟁·#2 LangGraph 성숙 논쟁; open query='도구 발굴을 GitHub API 직접 관측으로 전환' |
 | 2026-07-28 | [방법론 2건](reports/2026-07-28/README.md) | `--days=7` 첫 실적용 → 중복↓·도구 발굴력↓ 트레이드오프 실측; **채택 S/A 신규도구 0건**; #1 MCP 07-28 스펙 최종화(07-27이 명시 이월)·#2 코딩 품질 논쟁; Claude Security 플러그인은 라이선스·비용 불명으로 게이트 제외 |
 | 2026-07-27 | [채택 3건](reports/2026-07-27/README.md) | 스윕 6건 중 3건이 브리치 후속 중복 → 제외; Rapid7 MCP서버 라이선스 불명(G3) 제외; 테마 '컨텍스트 덜어내기(Claude 5 context engineering)·로컬 MCP'. (07-25·26 미발행) |
@@ -71,6 +71,6 @@ daily-trend-report/
 
 ## 주제형 조사 노트
 
-- 2026-07-30: [로컬 LLM·개발 메모리·결함 이력 검색 최근 30일 조사](reports/2026-07-30/README.md)
+- 2026-07-30: [로컬 LLM·개발 메모리·결함 이력 검색 최근 30일 조사](reports/2026-07-30/README.md#2부-2026-07-30-관심사-조사---로컬-llm-개발-메모리-결함-이력-검색) (07-30 리포트 2부)
 - 2026-07-29: [Git·Jira 연동 LLM 워크플로와 사양·TestCase·결함이력 활용](reports/2026-07-29/git-jira-llm-workflow.md)
 - 2026-07-29: [과거 결함 검색용 Operational Memory Retrieval 도입 검토와 auto-grill](reports/2026-07-29/operational-memory-retrieval-auto-grill.md)
