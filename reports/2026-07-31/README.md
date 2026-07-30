@@ -204,11 +204,11 @@
 
 1. ~~**G3 통과 목록에 문서형 라이선스를 넣을지 결정 필요(신규, 우선).**~~ → **✅ 발행 당일 해결.** `harness-engineering`(2,407★)이 **CC-BY-4.0이라는 이유만으로** 탈락한 것이 발단이었다. 사용자 판단으로 **문서형 산출물에 한해 CC0-1.0·CC-BY-4.0을 통과**로 두고 **NC·ND·SA는 제외**하는 안이 채택돼 [ADOPTION-CRITERIA.md](../../ADOPTION-CRITERIA.md)에 반영됐다. 위 [발행 후 정정](#-발행-후-정정-2026-07-31-기준-개정) 참조.
 2. ~~**`NOASSERTION`은 판정이 아니라 "LICENSE 원문을 읽으라"는 신호다(신규, 우선).**~~ → **✅ 발행 당일 해결, 기준 문서에 명문화.** 이번 판 채택 4건 중 2건(`finding-unknowns-skills`·`code-migration-kit`)이 API상 `NOASSERTION`이었지만 파일 본문은 **표준 MIT / 표준 Apache-2.0**이었다 — API 필드만 보고 걸렀다면 벤더 공식 킷을 "라이선스 불명"으로 버렸을 것이다. 반대 방향도 확인됐다: 07-30이 `NOASSERTION`으로 제외한 `openclaude-improved`의 LICENSE 파일은 **"Anthropic Claude Code CLI에서 파생됐으며 원본은 독점 소프트웨어"라는 NOTICE**였다 — 제외는 옳았고 사유는 "불명"이 아니라 **"독점 파생물"이라는 더 강한 근거**였다(덧붙여 이 저장소도 #1의 그 블롭을 담고 있다).
-2-1. **다음 판 과제**: `harness-engineering`의 **내용 심사**(게이트는 통과, 유용성 미평가), 그리고 **기존 리포트에서 라이선스 사유로 제외했던 항목의 소급 재판정** — 개정 전 기준으로 걸린 CC 계열 문서형 항목이 더 있는지 확인할 것.
+2-1. ~~**소급 재판정**~~ → **✅ 발행 당일 완료** → [RE-ADJUDICATION.md](../../RE-ADJUDICATION.md). 07-24 이후 라이선스 사유 제외분 7건을 재판정해 **뒤집힘 2건**(`harness-engineering`, **Claude Security 플러그인**), **사유 교체 2건**(Rapid7 = G3 아니라 G1+G2+G4 / `openclaude-improved` = 불명 아니라 독점 파생물), **유지 3건**(`OptMem`·`token-diet`은 LICENSE 여전히 없음, 유출 프롬프트 재배포물). **다음 판 과제**로 남은 것은 `harness-engineering`과 Claude Security 플러그인의 **내용 심사**(둘 다 게이트만 통과, 유용성 미평가), 그리고 재판정 중 발견한 신규 후보 [`anthropics/defending-code-reference-harness`](https://github.com/anthropics/defending-code-reference-harness)(6,880★, Apache-2.0, 스킬 8종은 stdlib만·하네스는 B) 평가다.
 3. **하이브리드 쿼리 세트 고정(07-30 이월).** 이번에도 GitHub 쿼리 4개를 수동 구성했다. **재현 가능한 형태로 고정**할 것 — `created:>=D-30` × (stars 구간) × (키워드/토픽 축) + **소유자 단위 2차 스캔**(이번 판에서 필요성이 입증됨).
 4. **DISCOVERY 클러스터 오염 필터(신규).** 이번에 제외한 항목은 `r/BodyHackGuide` 결과가 주제 클러스터에 섞인 사례다. 엔진 로그에 `Discovered subreddits`가 남으므로 **주제와 무관한 서브레딧이 섞인 클러스터는 정량치를 인용하지 않는다**는 규칙을 명문화할 것.
 5. **Reddit 원문 permalink(07-28~07-30 이월, 지속).** 07-30이 HN Algolia로 HN 쪽은 해결했다. Reddit은 미해결이나, 도구 발굴이 GitHub API로 이관되면서 **우선순위는 낮다.**
-6. **Claude Security 플러그인 재판정(07-28~07-30 이월, 지속).** 라이선스·과금이 공개되면 게이트 재적용.
+6. ~~**Claude Security 플러그인 재판정(07-28~07-30 이월, 지속).**~~ → **✅ 발행 당일 해소, 3판 이월 종료.** 라이선스·과금이 모두 확인됐다 — 플러그인 본체가 `anthropics/claude-plugins-official`(**Apache-2.0**, 32,873★) 아래 공개돼 있고, 결정론 패턴 검사 계층은 모델 호출이 없어 **비용 0**이다. **G1~G4 전부 통과 → S등급 채택.** 상세는 [RE-ADJUDICATION.md](../../RE-ADJUDICATION.md).
 
 ---
 
