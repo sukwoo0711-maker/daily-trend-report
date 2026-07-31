@@ -55,6 +55,7 @@ daily-trend-report/
 
 | 날짜 | 리포트 | 비고 |
 |---|---|---|
+| 2026-08-01 | [채택 3건 + 방법론 1건](reports/2026-08-01/README.md) | 테마 **"코드를 읽지 말고 증거를 읽어라"** — 채택 3건이 전부 검증·증거 축. #1 **DISCOVERY의 HN 수치는 item ID로 확인 전 인용 금지**(양성 대조 3건 ID 조회로 실재·정확 확인 vs 미확인 3건 전량 제외); S 3건 = harness-engineering(07-31 이월 내용심사 완료)·speak-human-tw(42케이스 벤치+버전별 eval)·old-coder(SPEC→GAUNTLET→EVIDENCE+뮤테이션 테스트). **신설 계정 스캔 게이트 첫 오탐 교정** — 판별 기준을 "실행 파일 존재"에서 "동일 블롭 반복"으로 좁힘 |
 | 2026-07-31 | [채택 4건 + 보안 1건](reports/2026-07-31/README.md) | **07-30 #5(스킬 레포에 Windows 바이너리) 확대 추적 → 계정 단위 캠페인 확인**: 동일 블롭 `79d0513…`(804,688B)이 한 계정의 **레포 6개에 4개 이름으로 재배포**(합계 약 2,079★·356fork, 07-20~29 생성). **게이트를 레포 단위→계정 단위 스캔으로 승격**. 채택 S 3건(pilotfish·finding-unknowns-skills·Anthropic 이식 킷) + A 1건(codex-hygiene, 07-30 이월분 검증 완료). open query: G3에 CC-BY 처리 신설, `NOASSERTION`은 LICENSE 원문 확인 후 판정 |
 | 2026-07-30 | [채택 2건 + 방법론·보안 3건 · 관심사 조사](reports/2026-07-30/README.md) | **1부(트렌드)**: 하이브리드 첫 적용(뉴스=DISCOVERY 참여도 / 도구=GitHub REST API 직접 관측) → 07-29 open query 1 실행, **3일 연속 0건 종료·S등급 2건 복귀**(fable-method·self-learning-skills); HN Algolia로 permalink 재해결(open query 2 부분 해결); HANDBOOK.md 벤치마크(긴 정책문서 최고 36.2%)·HF 침입 기술 타임라인·스킬 저장소에 Windows 바이너리 동봉(G1 제외). **2부(관심사 조사)**: 로컬 LLM·개발 메모리·결함 이력 검색 — Git/Markdown reviewable memory, BM25 우선, bounded local model, retrieval 평가·보안 경계 |
 | 2026-07-29 | [방법론 2건](reports/2026-07-29/README.md) | 30일 윈도우로 되돌려도 브리치 클러스터가 랭킹 지배 → 재부상 원인=윈도우 아닌 참여도 랭킹 구조 실측; **채택 S/A 신규도구 0건(2일 연속)**; #1 열정↔채택 격차 논쟁·#2 LangGraph 성숙 논쟁; open query='도구 발굴을 GitHub API 직접 관측으로 전환' |
