@@ -91,6 +91,48 @@ done
 - **저장소의 자기 주장과 파일 목록을 대조한다.** `package.json`이 *"No network, no dependencies"* 라고 적어 두고 **네트워크 라이브러리를 동봉**하면 그 불일치 자체가 근거다.
 - **은닉이 노골적이지 않아도 판정한다.** 08-02의 `ratchet`은 정책 우회·base64·창 숨김을 썼지만, 08-03의 `humanizer-cli`는 **결백해 보이게 쓰인 런처**로 같은 곳에 도착했다 — 화면에 보이는 패널을 Node가 직접 그려서 **바이너리가 무엇을 하든 출력이 같도록** 설계했고, 주석이 *"이 폴더에 다른 exe를 떨어뜨려도 그대로 동작한다"* 고 스스로 밝힌다. **표시되는 출력과 실행되는 것이 설계상 분리돼 있으면** 은닉 신호 목록에 걸리지 않아도 G1 제외한다.
 
+**끼워 넣은 것이 아니라 가져온 것을 보라 (2026-08-04 4차 교정)**
+
+07-31 이후 이 게이트는 판별 축을 **exe 해시 → 파일 한 벌** 로 넓혀 왔다. 08-04 실측에서 **그 축 전부가 공격자가 자유롭게 갈아치울 수 있는 쪽**이었음이 드러났다.
+
+같은 캠페인 계정의 저장소 2곳을 상류와 블롭 단위로 대조한 결과다.
+
+| 캠페인 저장소 | 상류 원본 | 대조 결과 |
+|---|---|---|
+| `andrej-karpathy-skills` (549★) | `multica-ai/andrej-karpathy-skills` **199,077★** | `skills/karpathy-guidelines/SKILL.md` = `6a62d0441753`, `README.zh.md` = `1228d8ccbe8f` — **바이트 동일** |
+| `ponytail-improved` (584★) | `DietrichGebert/ponytail` **94,717★ · MIT** | 스킬 파일 **6종 전부 바이트 동일**(`02c0712c8627` 등). 설명 문구도 글자까지 동일 |
+
+**둘 다 GitHub fork가 아니다**(`fork:false`, `parent:none`) — "forked from" 배너가 뜨지 않는다. 바뀐 것은 README와 삼종세트(exe·DLL·`gup.xml`) 주입뿐이다.
+
+즉 **저장소의 매력(내용물)은 진짜이고, 그것이 자기 것이 아니다.** 별이 빠르게 붙는 것도 설명된다 — 19.9만★ 원본의 파일을 담았으니 자연스러운 반응이며, **평가 대상과 별이 가리키는 대상이 어긋나 있다**. 새 후보를 받을 때 아래를 돌린다.
+
+```bash
+# ① 후보의 SKILL.md 블롭 SHA
+gh api "repos/{owner}/{repo}/git/trees/HEAD?recursive=1" \
+  --jq '.tree[]|select(.path|endswith("SKILL.md"))|"\(.sha[0:12]) \(.size) \(.path)"'
+
+# ② 설명 문구를 그대로 검색해 상위 저장소를 찾는다 (가장 싼 1단계 —
+#    08-04의 두 건 모두 description이 원본과 글자까지 같았다)
+gh search repos "{description 원문}" --sort stars --limit 5 \
+  --json fullName,stargazersCount,createdAt,description
+
+# ③ 상류에서 같은 값을 뽑아 대조하고, fork 여부를 확인한다
+gh api "repos/{owner}/{repo}" --jq '"fork:\(.fork) parent:\(.parent.full_name // "none")"'
+```
+
+**판정 규칙**: 후보의 마크다운 블롭이 상위 저장소와 **동일한데 fork 관계가 없으면**, 실행 파일이 하나도 없어도 **계보 은폐로 보고 G1 검토 대상**에 올린다. 라이선스가 MIT라 복제 자체는 위반이 아닐 수 있다 — 문제는 복제가 아니라 **계보를 지운 것**이다.
+
+**뒤집어 말하면, 상류 계보를 스스로 밝힌 산출물은 신뢰도 가점 대상이다** (2026-08-04 #5 `grill-for-unknowns`: `NOTICE.md` + `references/upstream-lineage.md`로 상류 3종의 URL과 차용 범위를 항목별로 공개). 계보를 안 밝힌 산출물은 나쁘다기보다 **중복·표절 판정을 불가능하게 만든다**. 따라서 **중복 판정의 기준은 "주제가 같은가"가 아니라 "상류가 같은가"** 다.
+
+**08-03 관측 정정 (2026-08-04)**: 08-03은 `gup.xml`이 *"8개 전부 내용이 같다"* 고 적었다. **2변종이다.**
+
+| 블롭 | 크기 | 저장소 |
+|---|---|---|
+| `bd59041f343b` | 4,608B | `agents-council`(2경로) · `andrej-karpathy-skills` · `yoinks` · `FlashKDA` |
+| `c61c3c179a8d` | 4,521B | `openclaude-improved` · `ponytail-improved` · `ratchet` · `humanizer-cli` |
+
+생성일 순서와도 일치하지 않는다(`FlashKDA` 07-29가 구변종, `openclaude-improved` 07-26이 신변종). **"고정된 것 vs 바뀌는 것" 이분법 자체가 너무 거칠었다.** 판정(전건 G1 제외)은 바뀌지 않는다.
+
 **바이너리는 여전히 받지도 돌리지도 않는다.** 위 판정은 전부 트리·블롭 메타데이터와 텍스트 파일 원문만으로 가능하며, 악성 여부는 단정하지 않는다.
 
 **양방향 실측 사례(2026-08-02)**
