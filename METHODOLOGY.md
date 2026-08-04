@@ -51,7 +51,19 @@ A third cluster showed the same shape structurally: Algolia returned the same UR
 
 Operationally the rule is unchanged - verify every figure, cite the ID, otherwise write "not citable". What changes is the follow-up: when a reported figure exceeds the resolved story, **count the submissions on that topic** rather than concluding the engine misread one story.
 
-**Reddit figures remain uncited.** No verification path has been established (open since 2026-07-28). Either find one or record the decision not to cite Reddit quantitatively.
+**Reddit figures are not cited quantitatively (decided 2026-08-05).** This question was carried unresolved for nine consecutive reports, which is itself the failure the closure rule now forbids, so it is decided here rather than carried a tenth time.
+
+Public Reddit JSON is bot-gated and no equivalent of the Algolia lookup was found across nine attempts. The engine's Reddit comment counts are therefore exposed to the same multi-submission summing error demonstrated for HN, with no way to check.
+
+- Reddit is used for topic discovery and qualitative citation only - thread titles and quoted text are fine.
+- Comment counts, upvote counts, and any other Reddit metric do not appear in report bodies.
+- **Reversible.** If a verification path is established (official API credentials, an archive service such as arctic-shift), reopen the rule that day.
+
+## Open questions expire (2026-08-05)
+
+An open question carries for at most three reports. On the fourth appearance it must be resolved, dropped, or decided - including a decision that it cannot be answered. "Next edition" is valid three times.
+
+Two items reached five and nine carries before this rule existed. A list whose entries never terminate stops being a work queue and becomes a ritual.
 
 ## Freshness and corrections
 
