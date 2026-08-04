@@ -38,9 +38,18 @@ Cite the ID inline (`HN 49153374`). If the story does not resolve inside the win
 | Markdown-wiki memory benchmark | HN 37pt, 10c | `49156055` **2pt, 0c** | 18x over-report |
 | 3 remaining clusters | HN figures given | 0 hits in window | not citable |
 
-The two exact matches both originated on HN. The 18x over-report originated on Reddit and had only a low-score self-post on HN, indicating the engine attributes off-HN engagement to the HN field. That is a hypothesis from six observations, not a validated rule; keep counting on the same axis.
-
 Blanket demotion would have discarded two accurate citations. The correct control is per-figure verification, applied exhaustively.
+
+**Mechanism (revised 2026-08-05 - supersedes the 08-04 hypothesis).** The 08-04 entry proposed that clusters originating on HN are accurate and clusters originating elsewhere are inflated. The next day's sweep refuted it: two clusters both originated on HN, one matched exactly and one was 1.37x high. The dividing factor is not origin but **how many HN submissions exist for the topic** - the engine sums engagement across them and reports the total as one story's figure.
+
+| Cluster (2026-08-05) | Engine reported | Algolia resolved | Sum of resolved |
+|---|---|---|---|
+| Qwen3.8-Max | 1,092pt, 595c | `49150470` 1,092pt, 595c (single dominant story) | matches |
+| OpenAI/Hugging Face incident | 2,236pt, 1,609c | `48997548` 1,632pt/1,158c + `49015639` 587pt/450c | 2,219pt, 1,608c - within 0.8% |
+
+A third cluster showed the same shape structurally: Algolia returned the same URL submitted four separate times. Two clusters are over-reported by more than the resolved submissions account for, so the summing account is demonstrated for one case and only suggested for the rest.
+
+Operationally the rule is unchanged - verify every figure, cite the ID, otherwise write "not citable". What changes is the follow-up: when a reported figure exceeds the resolved story, **count the submissions on that topic** rather than concluding the engine misread one story.
 
 **Reddit figures remain uncited.** No verification path has been established (open since 2026-07-28). Either find one or record the decision not to cite Reddit quantitatively.
 
